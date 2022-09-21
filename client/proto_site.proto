@@ -1,0 +1,23 @@
+syntax = "proto3";
+package search;
+
+service Search{
+    rpc GetServerResponse(Message) 
+    returns (SearchResults){}
+}
+
+message Message{
+    string message = 1;
+}
+
+message SearchResults{
+    repeated Site site = 1;
+}
+
+message Site{
+    int32 id = 1;
+    string url = 2;
+    string title = 3;
+    string description = 4;
+    string keywords = 5;
+}
