@@ -3,7 +3,7 @@ from concurrent import futures
 import proto_site_pb2 as pb2
 import proto_site_pb2_grpc as pb2_grpc
 from time import sleep
-from routes import querys
+from routes import query
 
 class SearchService(pb2_grpc.SearchServicer):
     def __init__(self, *args, **kwargs):
@@ -39,7 +39,7 @@ def serve():
 
 if __name__ == '__main__':
     sleep(20)
-    conn = querys.init_db()
+    conn = query.init_db()
     cursor = conn.cursor()
     serve()
 

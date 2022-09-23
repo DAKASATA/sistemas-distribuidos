@@ -68,5 +68,7 @@ def get_data_from_url(url):
 
 
 if __name__ == "__main__":
-    Data_name = './user-ct-test-collection-09_2.txt'
+    Data_name = './user-ct-test-collection-02.txt'
     ht = Data_reader(Data_name, 50)
+
+

@@ -7,6 +7,6 @@ def init_db():
         dbname=env('POSTGRES_DB'),
         user=env('POSTGRES_USER'),
         password=env('POSTGRES_PASSWORD'),
-        host=env('POSTGRES_HOST'),
+        host=env('POSTGRES_HOST')
     )
     return conn
